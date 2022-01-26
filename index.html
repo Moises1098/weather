@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <script
+    type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"
+  ></script>
+  <script> ssrc="http://api.openweathermap.org/data/2.5/forecast?id=524901&appid=17f14c8a5d7576efafdf74d8974d07d3"</script>
+  <link rel="stylesheet" href="assets/style.css" />
+    <title>Weather Dashboard</title>
+</head>
+<body>
+    <header>
+        <h1 class="text-white bg-custom text-center">Weather Dashboard</h1>
+    </header>
+    <aside>
+        <h2 class="font-weight-bold p-2">Search for a City:</h2>
+        <form class="input-group searchForm p-2">
+            <input type="text" class="form-control w-100 mb-3" id="cityName" onfocus="this.value=''" placeholder="City Name">
+            <button type="button" class="btn btn-primary w-100 bg-custom-2 mb-2">Search</button>
+            <div class=" w-100 rectangle"></div>
+            <div id="previousSearches" class="container my-2 pr-0 list-group">
+
+            </div>
+
+        </form>
+    </aside>
+    <section class="px-3">
+        <div id="cityContainer" class="border border-dark">
+            <h2 id="city" class=" p-1 font-weight-bold">Today:</h2>
+            <h2 id="currentDay" class="d-inline font-weight-bold"></h2>
+            <image id="icon" class="p-1"></image>   
+            <p id="temp" class="mt-0 mb-0 p-1">Temp:</p>
+            <p id="wind" class="mb-0 p-1">Wind:</p>
+            <p id="humidity" class="mb-0 p-1">Humidity:</p>
+            <p class="mb-0 p-1">UV Index: <span id="uvIndex"></span></p>
+        </div>
+
+
+        <div class="forecastContainer mt-4">
+            <h5 class="ml-2 font-weight-bold">5-Day Forecast:</h5>
+            <div class="card-group">
+                <div class="card mr-2 ml-2 text-white bg-custom-3 rounded">
+                  
+                  <div class="card-body">
+                    <h5 class="card-date-1"></h5> 
+                    <image id="icon-1"></image>          
+                    <p id="temp-1">Temp:</p>
+                    <p id="wind-1">Wind:</p>
+                    <p id="humidity-1">Humidity:</p>
+                  </div>
+
+                </div>
+                <div class="card mr-2 ml-2 text-white bg-custom-3 rounded">
+                  
+                  <div class="card-body">
+                    <h5 class="card-date-2"></h5> 
+                    <image id="icon-2"></image>           
+                    <p id="temp-2">Temp:</p>
+                    <p id="wind-2">Wind:</p>
+                    <p id="humidity-2">Humidity:</p>
+                  </div>
+
+                </div>
+                <div class="card mr-2 ml-2 text-white bg-custom-3 rounded">
+                  
+                  <div class="card-body">
+                    <h5 class="card-date-3"></h5> 
+                    <image id="icon-3"></image>           
+                    <p id="temp-3">Temp:</p>
+                    <p id="wind-3">Wind:</p>
+                    <p id="humidity-3">Humidity:</p>
+                  </div>
+
+                </div>
+                <div class="card mr-2 ml-2 text-white bg-custom-3 rounded">
+                  
+                  <div class="card-body">
+                    <h5 class="card-date-4"></h5>
+                    <image id="icon-4"></image>            
+                    <p id="temp-4">Temp:</p>
+                    <p id="wind-4">Wind:</p>
+                    <p id="humidity-4">Humidity:</p>
+                  </div>
+
+                </div>
+                <div class="card mr-2 ml-2 text-white bg-custom-3 rounded">
+                  
+                  <div class="card-body">
+                    <h5 class="card-date-5"></h5> 
+                    <image id="icon-5"></image>           
+                    <p id="temp-5">Temp:</p>
+                    <p id="wind-5">Wind:</p>
+                    <p id="humidity-5">Humidity:</p>
+                  </div>
+
+                </div>
+
+              </div>
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="assets/script.js"></script>
+</body>
+</html>
